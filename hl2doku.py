@@ -9,10 +9,10 @@ import sys
 
 
 def hl2doku(content):
-    content = re.sub("^'''(.*)'''<br>\n", "====== \\1 ======\n", content)
-    content = re.sub("\n----\n'''(.*)'''<br>\n----\n", "\n\n===== \\1 =====\n\n", content)
+    content = re.sub("^'''(.*)'''<br/>\n", "====== \\1 ======\n", content)
+    content = re.sub("\n----\n'''(.*)'''<br/>\n----\n", "\n\n===== \\1 =====\n\n", content)
     content = re.sub("'''", "**", content)
-    content = re.sub("<br>", " \\\\\\\\", content)
+    content = re.sub("<br/>", " \\\\\\\\", content)
     content = re.sub("\n----\n", "\n\n===== Background =====\n\n", content, 1)
 
     # Rearrange Skill Section
